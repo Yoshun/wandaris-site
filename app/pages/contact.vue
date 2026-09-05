@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { SOCIAL_LINKS, CONTACT_EMAIL } from '~/utils/links'
+
 useHead({
   title: 'Contact — Wandaris'
 })
@@ -137,11 +139,26 @@ async function handleSubmit() {
       <div class="mt-16 parchment-card p-8 text-center">
         <h3 class="font-title text-base text-neutral-200 mb-4 uppercase tracking-wider">Ou contactez-nous directement</h3>
         <a
-          href="mailto:contact@wandaris.com"
+          :href="`mailto:${CONTACT_EMAIL}`"
           class="text-primary-400 hover:text-primary-300 transition-colors font-body"
         >
-          contact@wandaris.com
+          {{ CONTACT_EMAIL }}
         </a>
+
+        <div class="mt-6 flex items-center justify-center gap-5">
+          <a
+            v-for="link in SOCIAL_LINKS"
+            :key="link.name"
+            :href="link.href"
+            target="_blank"
+            rel="noopener"
+            :title="link.name"
+            :aria-label="link.name"
+            class="text-neutral-400 hover:text-primary-400 transition-colors"
+          >
+            <UIcon :name="link.icon" class="size-5" />
+          </a>
+        </div>
       </div>
     </div>
   </div>

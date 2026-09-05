@@ -39,7 +39,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ['/', '/contact', '/team']
+      routes: ['/', '/contact', '/team', '/support']
     }
   }
 })

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { DISCORD_URL } from '~/utils/links'
+
 useReveal()
 </script>
 
@@ -70,7 +72,7 @@ useReveal()
         </span>
 
         <a
-          href="https://discord.gg/Cacq5xYX6Z"
+          :href="DISCORD_URL"
           target="_blank"
           rel="noopener"
           class="inline-flex items-center gap-2 text-neutral-400 hover:text-primary-400 font-title text-sm tracking-wider transition-colors"

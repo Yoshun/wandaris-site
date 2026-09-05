@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { DISCORD_URL } from '~/utils/links'
+
 useReveal()
 </script>
 
@@ -30,7 +32,7 @@ useReveal()
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="https://discord.gg/Cacq5xYX6Z"
+            :href="DISCORD_URL"
             target="_blank"
             rel="noopener"
             class="inline-flex items-center gap-2 px-10 py-4 bg-primary-700 hover:bg-primary-600 border border-primary-400/30 text-primary-100 font-title text-sm uppercase tracking-widest transition-all duration-300 btn-glow"

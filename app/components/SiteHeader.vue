@@ -5,6 +5,7 @@ const links = [
   { label: 'Le Jeu', to: '/#features' },
   { label: 'Le Monde', to: '/#world' },
   { label: 'Équipe', to: '/team' },
+  { label: 'Support', to: '/support' },
   { label: 'Contact', to: '/contact' }
 ]
 
