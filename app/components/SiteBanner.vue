@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { DISCORD_URL } from '~/utils/links'
+
 const dismissed = ref(false)
 
 onMounted(() => {
@@ -29,7 +31,7 @@ function dismiss() {
           En développement actif —
         </span>
         <a
-          href="https://discord.gg/Cacq5xYX6Z"
+          :href="DISCORD_URL"
           target="_blank"
           rel="noopener"
           class="inline-flex items-center gap-1.5 text-primary-100 hover:text-white text-sm font-title tracking-wide transition-colors"

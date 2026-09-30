@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { CONTACT_EMAIL } from '~/utils/links'
+
 useHead({
   title: 'Politique de confidentialité — Wandaris',
   meta: [
@@ -37,7 +39,7 @@ useHead({
           <li><strong class="text-neutral-300">Nom :</strong> Anthony Tetrel</li>
           <li><strong class="text-neutral-300">Statut :</strong> Entrepreneur individuel</li>
           <li><strong class="text-neutral-300">SIRET :</strong> 849 464 532 00027</li>
-          <li><strong class="text-neutral-300">Email :</strong> contact@wandaris.com</li>
+          <li><strong class="text-neutral-300">Email :</strong> {{ CONTACT_EMAIL }}</li>
         </ul>
       </section>
 
@@ -133,7 +135,7 @@ useHead({
         </ul>
         <p class="mt-3">
           Pour exercer ces droits, contactez-nous à :
-          <a href="mailto:contact@wandaris.com" class="text-primary-400 hover:text-primary-300 transition-colors">contact@wandaris.com</a>
+          <a :href="`mailto:${CONTACT_EMAIL}`" class="text-primary-400 hover:text-primary-300 transition-colors">{{ CONTACT_EMAIL }}</a>
         </p>
         <p class="mt-3">
           Vous pouvez également introduire une réclamation auprès de la
@@ -166,7 +168,7 @@ useHead({
         <h2 class="font-title text-lg text-neutral-100 mb-3">Contact</h2>
         <p>
           Pour toute question relative à vos données personnelles :
-          <a href="mailto:contact@wandaris.com" class="text-primary-400 hover:text-primary-300 transition-colors">contact@wandaris.com</a>
+          <a :href="`mailto:${CONTACT_EMAIL}`" class="text-primary-400 hover:text-primary-300 transition-colors">{{ CONTACT_EMAIL }}</a>
         </p>
       </section>
     </div>

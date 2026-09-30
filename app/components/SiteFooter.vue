@@ -16,18 +16,6 @@ const year = new Date().getFullYear()
             Explorez de vrais lieux, combattez, craftez.<br>
             L'aventure commence à chaque pas.
           </p>
-          <!-- Social links -->
-          <div class="mt-4 flex items-center gap-3">
-            <a
-              href="https://discord.gg/Cacq5xYX6Z"
-              target="_blank"
-              rel="noopener"
-              aria-label="Rejoindre le serveur Discord de Wandaris"
-              class="text-neutral-400 hover:text-primary-400 transition-colors"
-            >
-              <UIcon name="i-simple-icons-discord" class="size-5" />
-            </a>
-          </div>
         </div>
 
         <!-- Links -->

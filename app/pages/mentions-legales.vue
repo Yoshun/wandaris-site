@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { CONTACT_EMAIL } from '~/utils/links'
+
 useHead({
   title: 'Mentions légales — Wandaris',
   meta: [
@@ -32,7 +34,7 @@ useHead({
           <li><strong class="text-neutral-300">SIRET :</strong> 849 464 532 00027</li>
           <li><strong class="text-neutral-300">Code APE :</strong> 62.01Z — Programmation informatique</li>
           <li><strong class="text-neutral-300">Adresse :</strong> [ADRESSE À COMPLÉTER]</li>
-          <li><strong class="text-neutral-300">Email :</strong> contact@wandaris.com</li>
+          <li><strong class="text-neutral-300">Email :</strong> {{ CONTACT_EMAIL }}</li>
         </ul>
       </section>
 
@@ -88,7 +90,7 @@ useHead({
         <h2 class="font-title text-lg text-neutral-100 mb-3">Contact</h2>
         <p>
           Pour toute question relative aux mentions légales, vous pouvez nous contacter à l'adresse :
-          <a href="mailto:contact@wandaris.com" class="text-primary-400 hover:text-primary-300 transition-colors">contact@wandaris.com</a>
+          <a :href="`mailto:${CONTACT_EMAIL}`" class="text-primary-400 hover:text-primary-300 transition-colors">{{ CONTACT_EMAIL }}</a>
         </p>
       </section>
     </div>
