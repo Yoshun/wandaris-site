@@ -29,8 +29,8 @@ onUnmounted(() => {
 
 <template>
   <header
-    class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
-    :class="scrolled ? 'bg-neutral-950/95 backdrop-blur-md shadow-lg shadow-black/20' : 'bg-transparent'"
+    class="sticky top-0 left-0 right-0 z-50 transition-all duration-300"
+    :class="scrolled ? 'bg-neutral-950/95 backdrop-blur-md shadow-lg shadow-black/20' : 'bg-neutral-950/50 backdrop-blur-sm'"
   >
     <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
       <!-- Logo -->

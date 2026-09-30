@@ -143,6 +143,56 @@ html {
     radial-gradient(ellipse at 20% 70%, rgba(107, 76, 50, 0.06) 0%, transparent 50%);
 }
 
+/* ─── Global page gradient (green top → brown bottom) ─── */
+.page-gradient {
+  position: relative;
+  isolation: isolate;
+}
+
+.page-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(40, 80, 50, 0.12) 0%,
+      rgba(45, 75, 48, 0.08) 15%,
+      rgba(60, 70, 45, 0.05) 30%,
+      transparent 50%,
+      rgba(107, 76, 50, 0.04) 65%,
+      rgba(107, 76, 50, 0.08) 80%,
+      rgba(58, 34, 24, 0.12) 100%
+    );
+}
+
+/* ─── Section dividers ─── */
+.section-divider {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 2rem;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  max-width: 280px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(196, 168, 130, 0.35), transparent);
+}
+
+.divider-diamond {
+  padding: 0 1.25rem;
+  color: rgba(196, 168, 130, 0.45);
+  font-size: 0.85rem;
+}
+
 /* ─── Screenshot mockup ─── */
 .phone-mockup {
   position: relative;

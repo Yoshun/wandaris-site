@@ -26,8 +26,7 @@ const reasons = [
 </script>
 
 <template>
-  <section class="relative py-20 md:py-32">
-    <div class="absolute inset-0 bg-atmosphere-alt" />
+  <section class="relative py-20 md:py-32" aria-label="Pourquoi choisir Wandaris">
 
     <div class="relative max-w-5xl mx-auto px-6">
       <div class="text-center mb-16 reveal">

@@ -12,21 +12,36 @@ const year = new Date().getFullYear()
         <div>
           <span class="font-heading text-xl text-primary-400">Wandaris</span>
           <p class="mt-3 text-sm text-neutral-400 leading-relaxed">
-            Un jeu mobile d'aventure RPG en monde réel.<br>
+            Jeu mobile d'aventure RPG en monde réel.<br>
+            Explorez de vrais lieux, combattez, craftez.<br>
             L'aventure commence à chaque pas.
           </p>
+          <!-- Social links -->
+          <div class="mt-4 flex items-center gap-3">
+            <a
+              href="https://discord.gg/Cacq5xYX6Z"
+              target="_blank"
+              rel="noopener"
+              aria-label="Rejoindre le serveur Discord de Wandaris"
+              class="text-neutral-400 hover:text-primary-400 transition-colors"
+            >
+              <UIcon name="i-simple-icons-discord" class="size-5" />
+            </a>
+          </div>
         </div>
 
         <!-- Links -->
         <div>
           <h4 class="font-title text-sm uppercase tracking-wider text-neutral-300 mb-4">Navigation</h4>
-          <div class="flex flex-col gap-2">
-            <NuxtLink to="/#features" class="text-sm text-neutral-400 hover:text-primary-400 transition-colors">Le Jeu</NuxtLink>
-            <NuxtLink to="/#world" class="text-sm text-neutral-400 hover:text-primary-400 transition-colors">Le Monde</NuxtLink>
-            <NuxtLink to="/team" class="text-sm text-neutral-400 hover:text-primary-400 transition-colors">Équipe</NuxtLink>
-            <NuxtLink to="/support" class="text-sm text-neutral-400 hover:text-primary-400 transition-colors">Support</NuxtLink>
-            <NuxtLink to="/contact" class="text-sm text-neutral-400 hover:text-primary-400 transition-colors">Contact</NuxtLink>
-          </div>
+          <nav aria-label="Navigation footer">
+            <div class="flex flex-col gap-2">
+              <NuxtLink to="/#features" class="text-sm text-neutral-400 hover:text-primary-400 transition-colors">Le Jeu</NuxtLink>
+              <NuxtLink to="/#world" class="text-sm text-neutral-400 hover:text-primary-400 transition-colors">Le Monde</NuxtLink>
+              <NuxtLink to="/team" class="text-sm text-neutral-400 hover:text-primary-400 transition-colors">Équipe</NuxtLink>
+              <NuxtLink to="/support" class="text-sm text-neutral-400 hover:text-primary-400 transition-colors">Support</NuxtLink>
+              <NuxtLink to="/contact" class="text-sm text-neutral-400 hover:text-primary-400 transition-colors">Contact</NuxtLink>
+            </div>
+          </nav>
         </div>
 
         <!-- Community -->
@@ -51,13 +66,13 @@ const year = new Date().getFullYear()
         <div>
           <h4 class="font-title text-sm uppercase tracking-wider text-neutral-300 mb-4">Légal</h4>
           <div class="flex flex-col gap-2">
-            <span class="text-sm text-neutral-500">Mentions légales (bientôt)</span>
-            <span class="text-sm text-neutral-500">Politique de confidentialité (bientôt)</span>
+            <NuxtLink to="/mentions-legales" class="text-sm text-neutral-400 hover:text-primary-400 transition-colors">Mentions légales</NuxtLink>
+            <NuxtLink to="/confidentialite" class="text-sm text-neutral-400 hover:text-primary-400 transition-colors">Politique de confidentialité</NuxtLink>
           </div>
         </div>
       </div>
 
-      <div class="divider-ornament my-8">✦</div>
+      <div class="divider-ornament my-8" aria-hidden="true">✦</div>
 
       <div class="text-center text-sm text-neutral-500">
         <p>© {{ year }} Wandaris. Tous droits réservés.</p>

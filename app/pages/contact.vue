@@ -2,8 +2,25 @@
 import { SOCIAL_LINKS, CONTACT_EMAIL } from '~/utils/links'
 
 useHead({
-  title: 'Contact — Wandaris'
+  title: 'Contact — Wandaris',
+  meta: [
+    { name: 'description', content: 'Contactez l\'équipe Wandaris pour toute question, suggestion ou partenariat. Formulaire de contact et email direct disponibles.' },
+    { property: 'og:title', content: 'Contact — Wandaris' },
+    { property: 'og:description', content: 'Contactez l\'équipe Wandaris pour toute question, suggestion ou partenariat.' },
+    { property: 'og:url', content: 'https://wandaris.com/contact' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://wandaris.com/contact' }
+  ]
 })
+
+useSchemaOrg([
+  defineWebPage({
+    '@type': 'ContactPage',
+    name: 'Contact — Wandaris',
+    description: 'Contactez l\'équipe Wandaris pour toute question, suggestion ou partenariat.'
+  })
+])
 
 const form = reactive({
   name: '',
@@ -80,21 +97,25 @@ async function handleSubmit() {
       <form v-else-if="!submitted" @submit.prevent="handleSubmit" class="space-y-6">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div>
-            <label class="block font-title text-sm text-neutral-300 mb-2 uppercase tracking-wider">Nom</label>
+            <label for="contact-name" class="block font-title text-sm text-neutral-300 mb-2 uppercase tracking-wider">Nom</label>
             <input
+              id="contact-name"
               v-model="form.name"
               type="text"
               required
+              autocomplete="name"
               placeholder="Votre nom"
               class="w-full px-4 py-3 bg-neutral-900/50 border border-primary-400/15 text-neutral-100 placeholder-neutral-500 focus:border-primary-400/40 focus:outline-none transition-colors font-body"
             />
           </div>
           <div>
-            <label class="block font-title text-sm text-neutral-300 mb-2 uppercase tracking-wider">Email</label>
+            <label for="contact-email" class="block font-title text-sm text-neutral-300 mb-2 uppercase tracking-wider">Email</label>
             <input
+              id="contact-email"
               v-model="form.email"
               type="email"
               required
+              autocomplete="email"
               placeholder="votre@email.com"
               class="w-full px-4 py-3 bg-neutral-900/50 border border-primary-400/15 text-neutral-100 placeholder-neutral-500 focus:border-primary-400/40 focus:outline-none transition-colors font-body"
             />
@@ -102,8 +123,9 @@ async function handleSubmit() {
         </div>
 
         <div>
-          <label class="block font-title text-sm text-neutral-300 mb-2 uppercase tracking-wider">Sujet</label>
+          <label for="contact-subject" class="block font-title text-sm text-neutral-300 mb-2 uppercase tracking-wider">Sujet</label>
           <input
+            id="contact-subject"
             v-model="form.subject"
             type="text"
             required
@@ -113,8 +135,9 @@ async function handleSubmit() {
         </div>
 
         <div>
-          <label class="block font-title text-sm text-neutral-300 mb-2 uppercase tracking-wider">Message</label>
+          <label for="contact-message" class="block font-title text-sm text-neutral-300 mb-2 uppercase tracking-wider">Message</label>
           <textarea
+            id="contact-message"
             v-model="form.message"
             required
             rows="6"

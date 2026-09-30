@@ -7,42 +7,41 @@ const features = [
     title: 'Explorez',
     description: 'Parcourez les sentiers du monde réel. Chaque chemin, chaque forêt, chaque sommet est une aventure qui n\'attend que vous. La carte s\'adapte à votre position GPS et révèle les trésors qui vous entourent.',
     screenshot: '/screenshots/map.png',
-    screenshotAlt: 'Carte de Wandaris'
+    screenshotAlt: 'Capture d\'écran de la carte interactive de Wandaris montrant les points d\'intérêt proches'
   },
   {
     icon: 'i-lucide-swords',
     title: 'Combattez',
     description: 'Affrontez des créatures qui se dressent sur votre route. Un système de combat en temps réel où vos stats, votre équipement et votre stratégie font la différence.',
     screenshot: '/screenshots/combat.png',
-    screenshotAlt: 'Combat dans Wandaris'
+    screenshotAlt: 'Capture d\'écran du système de combat en temps réel de Wandaris'
   },
   {
     icon: 'i-lucide-hammer',
     title: 'Craftez',
     description: 'Récoltez des ressources en chemin et maîtrisez 5 métiers d\'artisanat. Forgez armes et armures, préparez des potions — chaque pièce d\'équipement est unique.',
     screenshot: '/screenshots/craft.png',
-    screenshotAlt: 'Artisanat dans Wandaris'
+    screenshotAlt: 'Capture d\'écran de l\'interface d\'artisanat de Wandaris avec les 5 métiers'
   },
   {
     icon: 'i-lucide-compass',
     title: 'Découvrez',
     description: 'Des centaines de points d\'intérêt vous attendent : châteaux, ruines, cascades, sommets... Visitez-les, explorez votre région et débloquez de nouvelles récompenses.',
     screenshot: '/screenshots/poi.png',
-    screenshotAlt: 'Points d\'intérêt dans Wandaris'
+    screenshotAlt: 'Capture d\'écran d\'un point d\'intérêt réel dans Wandaris — château, ruine ou cascade'
   },
   {
     icon: 'i-lucide-route',
     title: 'Planifiez',
     description: 'Générez automatiquement un parcours de balade optimisé pour visiter les points d\'intérêt autour de vous. Choisissez votre rayon, et l\'app trace le chemin idéal — avec distance et durée estimées pour chaque étape.',
     screenshot: '/screenshots/route.png',
-    screenshotAlt: 'Planificateur de parcours'
+    screenshotAlt: 'Capture d\'écran du planificateur de parcours de balade de Wandaris'
   }
 ]
 </script>
 
 <template>
-  <section id="features" class="relative py-20 md:py-32">
-    <div class="absolute inset-0 bg-atmosphere" />
+  <section id="features" class="relative py-20 md:py-32" aria-label="Fonctionnalités du jeu">
 
     <div class="relative max-w-6xl mx-auto px-6">
       <!-- Section header -->
@@ -50,7 +49,7 @@ const features = [
         <h2 class="font-heading text-3xl md:text-5xl text-gradient text-glow mb-4">
           Votre Aventure
         </h2>
-        <div class="divider-ornament my-6">✦</div>
+        <div class="divider-ornament my-6" aria-hidden="true">✦</div>
         <p class="text-neutral-400 max-w-2xl mx-auto text-lg">
           Wandaris transforme chaque sortie en une aventure.
           Marchez, et le monde s'anime autour de vous.
@@ -83,15 +82,20 @@ const features = [
           <!-- Visual side (phone mockup) -->
           <div class="feature-visual flex justify-center">
             <div class="phone-mockup">
-              <!-- Placeholder if no screenshot yet -->
+              <!-- Screenshot with fallback -->
               <div class="aspect-[9/19.5] bg-gradient-to-b from-neutral-800 to-neutral-900 flex items-center justify-center">
-                <div class="text-center p-6">
+                <img
+                  :src="feature.screenshot"
+                  :alt="feature.screenshotAlt"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+                />
+                <div class="text-center p-6 flex-col items-center justify-center" style="display:none">
                   <UIcon :name="feature.icon" class="size-12 text-primary-400/30 mx-auto mb-3" />
                   <span class="text-neutral-600 text-xs font-title uppercase tracking-wider">{{ feature.screenshotAlt }}</span>
                 </div>
               </div>
-              <!-- Uncomment when screenshots are ready:
-              <img :src="feature.screenshot" :alt="feature.screenshotAlt" /> -->
             </div>
           </div>
         </div>

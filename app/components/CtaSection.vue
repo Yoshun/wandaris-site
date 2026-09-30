@@ -5,22 +5,10 @@ useReveal()
 </script>
 
 <template>
-  <section class="relative py-24 md:py-36">
-    <div class="absolute inset-0 bg-atmosphere" />
-    <!-- Extra vignette for dramatic close -->
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,rgba(0,0,0,0.4))]" />
+  <section class="relative py-24 md:py-36" aria-label="Rejoindre Wandaris">
 
     <div class="relative max-w-3xl mx-auto px-6 text-center">
       <div class="reveal">
-        <!-- Decorative -->
-        <div class="flex justify-center mb-10 opacity-30">
-          <div class="flex items-center gap-4">
-            <div class="w-16 h-px bg-gradient-to-r from-transparent to-primary-400" />
-            <span class="text-primary-400 text-xs tracking-[0.4em] font-title uppercase">Rejoignez-nous</span>
-            <div class="w-16 h-px bg-gradient-to-l from-transparent to-primary-400" />
-          </div>
-        </div>
-
         <h2 class="font-heading text-3xl md:text-5xl text-gradient text-glow mb-8">
           Prêt à partir ?
         </h2>

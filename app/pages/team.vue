@@ -1,7 +1,24 @@
 <script setup lang="ts">
 useHead({
-  title: 'Équipe — Wandaris'
+  title: 'Équipe — Wandaris',
+  meta: [
+    { name: 'description', content: 'Découvrez l\'équipe derrière Wandaris, le jeu mobile d\'aventure RPG en monde réel. Développé en France par des passionnés de randonnée et de jeux vidéo.' },
+    { property: 'og:title', content: 'Équipe — Wandaris' },
+    { property: 'og:description', content: 'Découvrez l\'équipe derrière Wandaris, le jeu mobile d\'aventure RPG en monde réel.' },
+    { property: 'og:url', content: 'https://wandaris.com/team' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://wandaris.com/team' }
+  ]
 })
+
+useSchemaOrg([
+  defineWebPage({
+    '@type': 'AboutPage',
+    name: 'Équipe — Wandaris',
+    description: 'L\'équipe derrière Wandaris, le jeu mobile d\'aventure RPG en monde réel.'
+  })
+])
 
 const team = [
   {

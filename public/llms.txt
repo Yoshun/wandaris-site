@@ -1,0 +1,34 @@
+# Wandaris
+
+> Wandaris est un jeu mobile d'aventure RPG en monde réel. Les joueurs explorent leur environnement à pied, découvrent de vrais lieux (châteaux, ruines, cascades, sommets), combattent des créatures, récoltent des ressources et maîtrisent 5 métiers d'artisanat. Chaque pas dans le monde réel fait progresser l'aventure.
+
+## À propos
+
+Wandaris transforme chaque sortie en plein air en une aventure de jeu de rôle. L'application utilise le GPS du téléphone pour superposer un monde fantastique médiéval au monde réel. Les points d'intérêt du jeu sont de vrais lieux géographiques (châteaux, ruines, cascades, sommets, monuments) vérifiés manuellement.
+
+Le jeu propose :
+- **Exploration GPS** : carte en temps réel, points d'intérêt réels, biomes dynamiques (forêts, montagnes, zones urbaines, terres sauvages)
+- **Combat en temps réel** : créatures adaptées au niveau du joueur, système de stats (force, dextérité, endurance, charisme, chance)
+- **5 métiers d'artisanat** : Bûcheron, Mineur, Forgeron, Couturier, Alchimiste — chacun avec 100 niveaux et 4 jalons
+- **Équipement** : 7 slots, 5 raretés, affixes aléatoires, gemmes à sertir
+- **Potions** : soins actifs en combat, buffs avec combos selon le niveau d'Alchimiste
+- **Parcours de balade** : planificateur intégré avec optimisation d'itinéraire piéton
+- **Zéro pay-to-win** : progression uniquement par l'exploration et les choix du joueur
+
+## Informations techniques
+
+- **Plateforme** : Android (iOS prévu)
+- **Développeur** : Anthony Tetrel (entrepreneur individuel, France)
+- **Technologies** : React Native (Expo), Node.js, PostgreSQL, MapLibre, Valhalla (routing piéton)
+- **Données cartographiques** : OpenStreetMap + MapTiler
+- **Site web** : https://wandaris.com
+- **Contact** : contact@wandaris.com
+- **Discord** : https://discord.gg/Cacq5xYX6Z
+
+## Pages du site
+
+- [Accueil](https://wandaris.com): Présentation du jeu, fonctionnalités, FAQ
+- [Équipe](https://wandaris.com/team): L'équipe derrière Wandaris
+- [Contact](https://wandaris.com/contact): Formulaire de contact
+- [Politique de confidentialité](https://wandaris.com/confidentialite): RGPD, données collectées, droits
+- [Mentions légales](https://wandaris.com/mentions-legales): Informations légales

@@ -18,8 +18,7 @@ const crafts = [
 </script>
 
 <template>
-  <section id="world" class="relative py-20 md:py-32">
-    <div class="absolute inset-0 bg-atmosphere" />
+  <section id="world" class="relative py-20 md:py-32" aria-label="Le monde de Wandaris — biomes et métiers">
 
     <div class="relative max-w-6xl mx-auto px-6">
       <!-- Section header -->
