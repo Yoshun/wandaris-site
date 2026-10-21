@@ -53,9 +53,13 @@ export default defineNuxtConfig({
     families: [
       { name: 'Cinzel Decorative', provider: 'google', weights: [400, 700, 900] },
       { name: 'Cinzel', provider: 'google', weights: [400, 500, 600, 700] },
-      { name: 'Lora', provider: 'google', weights: [400, 500, 600, 700], italic: true }
+      { name: 'Lora', provider: 'google', weights: [400, 500, 600, 700], styles: ['normal', 'italic'] }
     ]
   },
+
+  // ─── OG Image ───
+  // Livré par @nuxtjs/seo, inutilisé : l'image de partage est le fichier statique og-image.jpg
+  ogImage: { enabled: false },
 
   // ─── Sitemap ───
   sitemap: {
