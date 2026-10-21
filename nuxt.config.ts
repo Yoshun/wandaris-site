@@ -16,6 +16,9 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'fr' },
+      // Chaque page porte déjà la marque dans son titre (« Contact — Wandaris ») :
+      // sans ça, le modèle par défaut de Nuxt SEO ajoutait « | Wandaris » une seconde fois
+      titleTemplate: '%s',
       meta: [
         { name: 'theme-color', content: '#1a1410' },
         // Open Graph
@@ -60,6 +63,9 @@ export default defineNuxtConfig({
   // ─── OG Image ───
   // Livré par @nuxtjs/seo, inutilisé : l'image de partage est le fichier statique og-image.jpg
   ogImage: { enabled: false },
+  // Skew Protection (livré par @nuxtjs/seo 6) rattrape les fichiers JS d'un ancien déploiement
+  // par une route serveur : un site généré servi par Nginx n'en a pas, le service worker ne sert à rien
+  skewProtection: false,
 
   // ─── Sitemap ───
   sitemap: {
